@@ -1,5 +1,41 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Logo styling */
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+.navbar-logo {
+    height: 32px; /* Adjust based on your logo size */
+    width: auto;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+/* Ensure proper vertical alignment of logo and text */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 28px; /* Slightly smaller on mobile */
+    }
+    
+    .navbar-brand {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sb-topnav {
@@ -195,6 +231,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.5);
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Add spacing between menu items */
@@ -202,6 +239,7 @@ body {
     margin-bottom: 0.25rem;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Section background differentiation */
@@ -226,4 +264,65 @@ body {
 .menu-section {
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
+}
+
+/* Apply Poppins to all headings */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Apply Poppins to buttons */
+.btn {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NEW ALIGNMENT FIXES FOR SIDEBAR */
+
+/* Fix sidebar layout and alignment */
+.sb-sidenav {
+    height: 100%;
+    flex-direction: column;
+    z-index: 1000;
+    position: relative;
+}
+
+/* Fix navigation links */
+.sb-sidenav .nav-link {
+    display: flex;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.sb-nav-link-icon {
+    margin-right: 0.5rem;
+}
+
+/* Make sure the sidebar toggle works correctly */
+body.sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+    transform: translateX(-225px);
+    visibility: hidden;
+}
+
+body.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+    margin-left: -225px;
+}
+
+/* Ensure proper spacing in the sidebar menu */
+.sb-sidenav-menu {
+    padding-top: 1rem;
+}
+
+/* Clean up any duplicate/empty links */
+.sb-sidenav .nav-link:empty {
+    display: none;
+}
+
+/* Fix alignment between icon and text */
+.sb-nav-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.75rem;
 }

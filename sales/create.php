@@ -119,30 +119,8 @@ include '../includes/header.php';
                 <hr>
                 
                 <h5>Products</h5>
-                <div class="table-responsive mb-3">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="productTable">
-                            <!-- Products will be added here dynamically -->
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="3" class="text-end"><strong>Grand Total:</strong></td>
-                                <td><span id="grandTotal">₱0.00</span></td>
-                                <td></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
                 
+                <!-- Moved product selection above the product table -->
                 <div class="row mb-3">
                     <div class="col-md-8">
                         <select class="form-select" id="productSelect">
@@ -166,6 +144,30 @@ include '../includes/header.php';
                     <div class="col-md-2">
                         <button type="button" class="btn btn-primary w-100" id="addProduct">Add</button>
                     </div>
+                </div>
+                
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTable">
+                            <!-- Products will be added here dynamically -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-end"><strong>Grand Total:</strong></td>
+                                <td><span id="grandTotal">₱0.00</span></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
                 
                 <input type="hidden" name="total_amount" id="totalAmount" value="0">
